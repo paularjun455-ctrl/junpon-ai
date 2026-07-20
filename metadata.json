@@ -1,0 +1,6 @@
+{
+  "name": "Junpon AI",
+  "description": "Your ultimate, highly polished all-in-one AI companion with AI Chat, Image Generation, Photo Editing, and subscription options.",
+  "requestFramePermissions": ["microphone", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
