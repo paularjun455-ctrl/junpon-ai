@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+4     @theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", Georgia, Cambria, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+10     /* Custom scrollbar helpers */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+19     .scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.2);
+  border-radius: 99px;
+}30
+/* Custom markdown rendering tags */
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  color: #111827; * Rich gray-900 for high-contrast on light backgrounds *
+}
+.dark .markdown-body h1, .dark .markdown-body h2, .dark .markdown-body h3 {
+  color: #f3f4f6; * high-contrast text-neutral-100 *
+}
+.markdown-body h1 { font-size: 1.35rem; }
+.markdown-body h2 { font-size: 1.2rem; }
+.markdown-body h3 { font-size: 1.05rem; }45
+.markdown-body p {
+  margin-bottom: 0.85em;
+  line-height: 1.7;
+  color: #1f2937; * Clean, dark gray-800 for high readability *
+}
+.dark .markdown-body p {
+  color: #d1d5db; * text-neutral-300 *
+}
+.markdown-body p:last-child {
+  margin-bottom: 0;
+}
+58     .markdown-body ul, .markdown-body ol {
+  margin-left: 1.25em;
+  margin-bottom: 0.85em;
+  list-style-type: disc;
+  color: #1f2937; * Clean, dark gray-800 for bulleted lists *
+}
+.dark .markdown-body ul, .dark .markdown-body ol {
+  color: #d1d5db;
+}
+.markdown-body ol {
+  list-style-type: decimal;
+}
+.markdown-body li {
+  margin-bottom: 0.35em;
+}73
+.markdown-body code {
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  background: rgba(0, 0, 0, 0.05); * Light gray for inline code in light mode *
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  color: #0d9488; * Dark teal for readability *
+}src/index.css (continued)
+ .dark .markdown-body code {
+   background: rgba(255, 255, 255, 0.08);
+   color: #20C997;
+ }86
+ .markdown-body pre {
+   background: #f3f4f6; * Clean code block bg for light mode *
+   border: 1px solid #e5e7eb;
+   color: #111827;
+   padding: 1rem;
+   border-radius: 8px;
+   overflow-x: auto;
+   margin: 1em 0;
+   font-family: var(--font-mono);
+   font-size: 0.8em;
+ }
+ .dark .markdown-body pre {
+   background: #090a0b;
+   border: 1px solid rgba(255, 255, 255, 0.08);
+   color: #f8fafc;
+ }
+ .markdown-body pre code {
+   background: transparent;
+   padding: 0;
+   border-radius: 0;
+   color: inherit;
+ }
+110      .markdown-body blockquote {
+   border-left: 3px solid #20C997;
+   padding-left: 1em;
+   color: #4b5563; * Gray-600 *
+   font-style: italic;
+   margin: 1em 0;
+ }
+ .dark .markdown-body blockquote {
+   color: #a3a3a3;
+ }
+121      /* Beautiful organic floating animation for the logo crystal */
+ @keyframes float {
+   0%, 100% {
+     transform: translateY(0px) rotate(0deg);
+   }
+   50% {
+     transform: translateY(-2.5px) rotate(1.5deg);
+   }
+ }
+ .animate-float {
+   animation: float 4s ease-in-out infinite;
+ }133
+
